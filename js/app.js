@@ -32,7 +32,7 @@ function lcm(a,b){
 
     if (commonFactors[0] > 0) {
         let greatestCommonFactor = commonFactors[0]
-        document.querySelector('#gcf').innerHTML = 'GCF: ' +greatestCommonFactor;
+        document.querySelector('#gcf').innerHTML = 'GCF: '+greatestCommonFactor;
 
         let quotient1 = a/greatestCommonFactor;
         console.log(quotient1)
@@ -40,8 +40,8 @@ function lcm(a,b){
         let lcm = quotient1*b;
         document.querySelector('#lcm').innerHTML = 'LCM: '+lcm;
     }else{
-        document.querySelector('#gcf').innerHTML = '1';
-        document.querySelector('#lcm').innerHTML = a*b;
+        document.querySelector('#gcf').innerHTML = 'GCF: '+1;
+        document.querySelector('#lcm').innerHTML = 'LCM: '+(a*b);
     }
 
    
