@@ -29,22 +29,22 @@ function lcm(a,b){
          }
         } 
     }
-    let greatestCommonFactor = commonFactors[0]
-  //  console.log(greatestCommonFactor)
-    document.querySelector('#gcf').innerHTML = 'GCF: ' +greatestCommonFactor;
 
-    let quotient1 = a/greatestCommonFactor;
-    console.log(quotient1)
+    if (commonFactors[0] > 0) {
+        let greatestCommonFactor = commonFactors[0]
+        document.querySelector('#gcf').innerHTML = 'GCF: ' +greatestCommonFactor;
 
-    // let quotient2 = b/greatestCommonFactor;
-    // console.log(quotient2)
+        let quotient1 = a/greatestCommonFactor;
+        console.log(quotient1)
 
-    let lcm = quotient1*b;
-    document.querySelector('#lcm').innerHTML = 'LCM: '+lcm;
-    
+        let lcm = quotient1*b;
+        document.querySelector('#lcm').innerHTML = 'LCM: '+lcm;
+    }else{
+        document.querySelector('#gcf').innerHTML = '1';
+        document.querySelector('#lcm').innerHTML = a*b;
+    }
 
-    // let LCM2 = quotient2*a
-    // console.log(LCM2)
+   
 }
 
 
